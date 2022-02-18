@@ -1,11 +1,15 @@
 # UniVRM UTS2 (UnityChanToonShaderVer2) Exporter
 
-https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project
+This  package is to allow UniVRM to export / import UTS2 shader.
 
 ## Installation
 
 ### 1. Install UniVRM and UTS2
 
+Install UniVRM and UTS2 in any way you like.
+
+- UniVRM: https://github.com/vrm-c/UniVRM
+- UTS2: https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project
 
 ### 2. Install this package
 
