@@ -30,7 +30,8 @@ namespace UniGLTF.ShaderPropExporter
         public static readonly string[] VRMExtensionShaders = new string[]
         {
             "VRM/UnlitTransparentZWrite",
-            "VRM/MToon"
+            "VRM/MToon",
+            "Universal Render Pipeline/Toon"
         };
 
         static Dictionary<string, ShaderProps> m_shaderPropMap;
