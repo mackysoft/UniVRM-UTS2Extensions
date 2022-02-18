@@ -12,7 +12,7 @@ Install UniVRM and UTS2 in any way you like.
 - UTS2: https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project
 
 ### 2. Install this package
-
+https://github.com/mackysoft/UniVRM-UTS2Exporter/releases
 
 ### 3. Add `"Universal Render Pipeline/Toon"` to `VRMExtensionShaders in VRMShaders/VRM/IO/Runtime/PreShaderPropExporter.cs`
 
