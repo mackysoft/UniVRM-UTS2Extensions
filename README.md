@@ -1,4 +1,4 @@
-# UniVRM UTS2 (UnityChanToonShaderVer2) Exporter
+# UniVRM UTS2 (UnityChanToonShaderVer2) Extensions
 
 This  package is to allow UniVRM to export / import UTS2 shader.
 
