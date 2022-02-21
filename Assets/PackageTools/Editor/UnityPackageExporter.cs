@@ -8,7 +8,7 @@ namespace MackySoft.PackageTools.Editor {
 	public static class UnityPackageExporter {
 
 		// The name of the unitypackage to output.
-		const string k_PackageName = "UniVRM-UTS2Exporter";
+		const string k_PackageName = "UniVRM-UTS2Extensions";
 
 		// The path to the package under the `Assets/` folder.
 		const string k_PackagePath = "MackySoft";
@@ -19,13 +19,13 @@ namespace MackySoft.PackageTools.Editor {
 		const string k_SearchPattern = "*";
 		const string k_PackageToolsFolderName = "PackageTools";
 
-		[MenuItem("Tools/UniVRM-UTS2Exporter/Export Package")]
+		[MenuItem("Tools/UniVRM-UTS2Extensions/Export Package")]
 		public static void Export () {
-			ExportPackage($"{k_ExportPath}/{k_PackageName}.unitypackage");
+			ExportPackage($"{k_ExportPath}/{k_PackageName}.unitypackage",GetAssetPaths());
+			ExportPackage($"{k_ExportPath}/VRMShaderUpdate.unitypackage",GetVRMShaderUpdateAssetPaths());
 		}
 
-		
-		public static string ExportPackage (string exportPath) {
+		public static string ExportPackage (string exportPath,string[] assetPaths) {
 			// Ensure export path.
 			var dir = new FileInfo(exportPath).Directory;
 			if (dir != null && !dir.Exists) {
@@ -34,7 +34,7 @@ namespace MackySoft.PackageTools.Editor {
 
 			// Export
 			AssetDatabase.ExportPackage(
-				GetAssetPaths(),
+				assetPaths,
 				exportPath,
 				ExportPackageOptions.Default
 			);
@@ -51,5 +51,11 @@ namespace MackySoft.PackageTools.Editor {
 			return assets;
 		}
 
+		public static string[] GetVRMShaderUpdateAssetPaths () {
+			return new string[] {
+				"Assets/VRMShaders/VRM/IO/Runtime/PreShaderPropExporter.cs",
+				"Assets/VRMShaders/VRM/IO/Runtime/PreShaderPropExporter.cs.meta"
+			};
+		}
 	}
 }
